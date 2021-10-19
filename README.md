@@ -18,7 +18,3 @@ npm run dev
 ```shell
 npm run build
 ```
-
-## Coding style
-
-> *soon*

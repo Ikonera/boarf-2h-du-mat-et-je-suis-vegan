@@ -1,7 +1,10 @@
-import React, { FunctionComponent } from "react"
+import React, { FunctionComponent, useState, useEffect } from "react"
+import { useHistory } from "react-router-dom"
 import { Link, Grid, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
-import { GitHub } from "@material-ui/icons"
+import bread from "../../assets/Pain.png"
+import pancake from "../../assets/Galette.png"
+
 //import "./page.scss"
 
 
@@ -25,28 +28,26 @@ const styles = makeStyles({
 const HomePage: FunctionComponent = () =>
 {
 	const classes = styles()
+	const history = useHistory()
 
-	const gitLinkProps = {
-		target: "_blank",
-		href: "https://www.github.com/Ikonera/boarf-2h-du-mat-et-je-suis-vegan"
+	const setContaining = (container: string) => {
+		localStorage.setItem("container", container)
+		if (localStorage.getItem("container")) history.push("/step2")
 	}
 
 	return (
 		<section className={ classes.root }>
-			<Grid container justifyContent="center" alignItems="center" className={ classes.container }>
-				<Grid item alignItems="center">
-					<GitHub fontSize="medium" />
-				</Grid>
-				<Grid item alignItems="center">
-					<Link {...gitLinkProps}>
-						<Typography className={ classes.link }>
-							github.com/Ikonera/boarf-2h-du-mat-et-je-suis-vegan
-						</Typography>
-					</Link>
-				</Grid>
+			<Grid>
+				<Typography variant="h2">
+					Pain ou galette ?
+				</Typography>
+			</Grid>
+			<Grid>
+				<img src={bread} alt="Pain" />
+				<img src={pancake} alt="Galette" />
 			</Grid>
 		</section>
-   )
+	)
 }
 
 export default HomePage

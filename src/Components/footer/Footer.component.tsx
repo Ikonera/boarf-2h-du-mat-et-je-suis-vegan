@@ -12,8 +12,11 @@ const styles = makeStyles({
 	root: {
 		bottom: '0',
 		width: '100%',
-		height: "3vh",
+		height: "5vh",
 		position: "absolute",
+		justifyContent: "space-evenly",
+		alignItems: "flex-end",
+		paddingRight: "2vh",
 	},
 })
 
@@ -24,7 +27,7 @@ const Footer: FunctionComponent = () =>
 	return (
 		<AppBar position="static" className={ classes.root }>
 			<Typography>
-				&copy; XXXX - XXXX YourSiteName
+				&copy; 2020 - 2021 Orf Company
 			</Typography>
 		</AppBar>
    )

@@ -13,7 +13,7 @@ const Header: FunctionComponent = () =>
 		<AppBar position="static">
 			<Toolbar>
 				<Typography>
-					React-TS-Skeleton
+					Boarf 2h du mat et je suis vegan
 				</Typography>
 			</Toolbar>
 		</AppBar>
