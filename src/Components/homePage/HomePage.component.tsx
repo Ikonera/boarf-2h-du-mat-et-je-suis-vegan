@@ -28,7 +28,7 @@ const HomePage: FunctionComponent = () =>
 
 	const gitLinkProps = {
 		target: "_blank",
-		href: "https://www.github.com/Ikonera/react-ts-skeleton"
+		href: "https://www.github.com/Ikonera/boarf-2h-du-mat-et-je-suis-vegan"
 	}
 
 	return (
@@ -40,7 +40,7 @@ const HomePage: FunctionComponent = () =>
 				<Grid item alignItems="center">
 					<Link {...gitLinkProps}>
 						<Typography className={ classes.link }>
-							github.com/Ikonera/react-ts-skeleton
+							github.com/Ikonera/boarf-2h-du-mat-et-je-suis-vegan
 						</Typography>
 					</Link>
 				</Grid>

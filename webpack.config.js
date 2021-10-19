@@ -3,13 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const { DefinePlugin } = require("webpack")
 
-const APP_NAME = "react-ts-skeleton"
+const APP_NAME = "Boarf, 2h du mat' et je suis vegan"
 
 module.exports = {
 	mode: "development",
 	devtool: "inline-source-map",
 	devServer: {
-		contentBase: "./dist",
 		port: 3010,
 		historyApiFallback: true,
 	},

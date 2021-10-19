@@ -22,7 +22,7 @@ const App: FunctionComponent = () =>
 
 ReactDOM.render(
 	<Router>
-	    <App />
+		<App />
 	</Router>,
     document.querySelector("#root")
 )
