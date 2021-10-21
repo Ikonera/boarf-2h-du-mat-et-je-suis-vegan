@@ -1,0 +1,47 @@
+{
+  "name": "boarf-2h-du-mat-et-je-suis-vegan",
+  "version": "0.6.5",
+  "description": "Boarf, fallait un nom.",
+  "scripts": {
+    "dev": "webpack serve --open",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ikonera/boarf-2h-du-mat-et-je-suis-vegan.git"
+  },
+  "author": "Ikonera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ikonera/boarf-2h-du-mat-et-je-suis-vegan/issues"
+  },
+  "homepage": "https://github.com/Ikonera/boarf-2h-du-mat-et-je-suis-vegan#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "clean-webpack-plugin": "^4.0.0",
+    "esbuild-loader": "^2.16.0",
+    "final-form": "^4.20.4",
+    "html-webpack-plugin": "^5.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-final-form": "^6.5.7",
+    "react-router-dom": "^5.3.0",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.30",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.3.1",
+    "css-loader": "^6.4.0",
+    "file-loader": "^6.2.0",
+    "sass": "^1.43.2",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.0",
+    "typescript": "^4.4.4",
+    "webpack-dev-server": "^4.3.1"
+  }
+}
