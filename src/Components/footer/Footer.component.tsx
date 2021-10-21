@@ -12,11 +12,12 @@ const styles = makeStyles({
 	root: {
 		bottom: '0',
 		width: '100%',
-		height: "5vh",
+		height: "10vh",
 		position: "absolute",
 		justifyContent: "space-evenly",
 		alignItems: "flex-end",
 		paddingRight: "2vh",
+		backgroundColor: "#000000",
 	},
 })
 

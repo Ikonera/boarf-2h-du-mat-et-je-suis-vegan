@@ -1,13 +1,25 @@
-import React, { FunctionComponent, useState, useEffect } from "react"
+import React, { FunctionComponent, useState, useEffect, useContext } from "react"
 import { useHistory } from "react-router-dom"
-import { Link, Grid, Typography } from "@material-ui/core"
+import { Link, Grid, Typography, Button } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import meat from "../../assets/Viande.png"
 import tofu from "../../assets/Tofu.png"
+import { KebabContext } from "../../store/context"
+import { setMeat } from "../../store/reducer"
 
 const styles = makeStyles({
 	root: {
+		padding: "4vh",
+		display: "flex",
+		flexDirection: "column",
 		minHeight: '100%',
+		fontFamily: 'Helvetica',
+		color: "#3F4841",
+		justifyContent: "center",
+		alignItems: "center",
+		paddingTop: "15vh",
+		paddingRight: "5vh",
+		paddingLeft: "5vh",
 	},
 	container: {
 		margin: '25vh auto',
@@ -26,10 +38,10 @@ const SecondStep: FunctionComponent = () =>
 {
 	const classes = styles()
 	const history = useHistory()
+	const { dispatch } = useContext(KebabContext)
 
-	const setMeat = (meat: string) => {
-		localStorage.setItem("meat", meat)
-		if (localStorage.getItem("meat")) history.push("/step3")
+	const meatSelection = (meat: string) => {
+		dispatch(setMeat(meat))
 	}
 
 	return (
@@ -40,8 +52,12 @@ const SecondStep: FunctionComponent = () =>
 				</Typography>
 			</Grid>
 			<Grid>
-                <img src={meat} alt="Viande" />
-				<img src={tofu} alt="Tofu" />
+                <img src={meat} alt="Viande" onClick={event => meatSelection("meat")} />
+				<img src={tofu} alt="Tofu" onClick={event => meatSelection("tofu")} />
+			</Grid>
+			<Grid>
+				<Button onClick={event => history.push("/step3")}>Suivant</Button>
+				<Button onClick={event => history.push("/")}>Précédent</Button>
 			</Grid>
 		</section>
 	)
