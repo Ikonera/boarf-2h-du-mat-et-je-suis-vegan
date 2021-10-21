@@ -6,7 +6,13 @@ import grec from "../../assets/grec.gif"
 
 const styles = makeStyles({
 	root: {
+		padding: "2vh",
+		display: "flex",
+		flexDirection: "column",
 		minHeight: '100%',
+		fontFamily: 'Helvetica',
+		color: "#3F4841",
+		alignItems: "center",
 	},
 	container: {
 		margin: '25vh auto',
@@ -18,6 +24,9 @@ const styles = makeStyles({
 	link: {
 		fontSize: '18px',
 		marginLeft: '5px',
+	},
+	tuSerasAligne: {
+		display: "flex",
 	}
 })
 
@@ -26,16 +35,6 @@ const Waiting: FunctionComponent = () =>
 	const classes = styles()
 	const history = useHistory()
 
-	const setTrim = (trim: string) => {
-		localStorage.setItem("trim", trim)
-		if (localStorage.getItem("trim")) history.push("/step3")
-	}
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         history.push('/')
-    //     }, 5000);
-    // })
 
 	return (
 		<section className={ classes.root }>
@@ -45,7 +44,7 @@ const Waiting: FunctionComponent = () =>
 				</Typography>
 			</Grid>
 			<Grid>
-				<Typography>Notre maitre kébabier prépare votre commande.</Typography>
+				<Typography className={classes.tuSerasAligne}>Notre maitre kébabier prépare votre commande.</Typography>
 				<img src={grec} alt="gne" />
                 <Typography>Patience...</Typography>
 			</Grid>
